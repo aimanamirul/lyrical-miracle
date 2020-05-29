@@ -1,5 +1,5 @@
 const clientId = '64350a0d1fed472ab721bbcffeb78316'; // Insert client ID here.
-const redirectUri = 'https://lyrical-miracle.netlify.app/'; // Have to add this to your accepted Spotify redirect URIs on the Spotify API.
+const redirectUri = 'https://lyrical-miracle.surge.sh/'; // Have to add this to your accepted Spotify redirect URIs on the Spotify API.
 let accessToken;
 
 const Spotify = {

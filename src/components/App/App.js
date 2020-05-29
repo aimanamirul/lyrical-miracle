@@ -8,8 +8,8 @@ const Player = (props) => {
     return ( 
         <div>
             {props.isPlaying === false ? (<p>Nothing's Playing Right Now</p>) : (<div><p>{props.data.name}</p><p>{props.data.artists[0].name}</p></div>)}
-            <button onClick={props.obtainPlaying}>Obtain What's Playing</button>
-            <button onClick={() => props.lyricSearch()}>Search Lyrics</button>
+            <button className="btn" onClick={props.obtainPlaying}>Obtain What's Playing</button>
+            <button className="btn" onClick={() => props.lyricSearch()}>Search Lyrics</button>
             <div className="lyrics">{props.lyrics}</div>
         </div>
     );
@@ -45,8 +45,10 @@ class App extends React.Component {
     }
 
     lyricSearch() {
+        //
+        //ES-A1qOUO4s9hO9G1lFWzGQIiwlEodm4NHzW8P1inB0LJL6Zbpgr0JZTOvE-VYTK
         const options = {
-            apiKey: 'XgTfBZk2Dt5C04AYyzP8gKgnRN3dtrjtV-5AxVUrLGkFaKZt0vL4gxHoUsv8Gh03', // genius developer access token
+            apiKey: 'cedcuB9KU-M50tpTTytX7LxzGMZ9rPhGoXwqr4e90qZPNjQTzOxxT8awQyi2LUKr', // genius developer access token
             title: this.state.data.name,
             artist: this.state.data.artists[0].name,
             optimizeQuery: true
