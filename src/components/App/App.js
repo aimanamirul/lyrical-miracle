@@ -1,4 +1,5 @@
 import React from 'react';
+import config from '../../config';
 import {getLyrics} from 'genius-lyrics-api';
 import './App.css';
 
@@ -45,10 +46,8 @@ class App extends React.Component {
     }
 
     lyricSearch() {
-        //
-        //ES-A1qOUO4s9hO9G1lFWzGQIiwlEodm4NHzW8P1inB0LJL6Zbpgr0JZTOvE-VYTK
         const options = {
-            apiKey: 'cedcuB9KU-M50tpTTytX7LxzGMZ9rPhGoXwqr4e90qZPNjQTzOxxT8awQyi2LUKr', // genius developer access token
+            apiKey: config.apiKey, // genius developer access token
             title: this.state.data.name,
             artist: this.state.data.artists[0].name,
             optimizeQuery: true
